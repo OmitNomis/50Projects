@@ -11,13 +11,11 @@
 
 body {
   font-family: "Inter", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  height: 100vh;
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
   background: linear-gradient(
     45deg,
     #f5f5f5,
@@ -31,7 +29,12 @@ body {
   );
 }
 .container {
-  text-align: center;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .progress-container {
   display: flex;
@@ -103,4 +106,20 @@ body {
 .btn:disabled {
   background-color: var(--line--border-empty);
   cursor: not-allowed;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.nav h1 {
+  margin-right: 10px;
+}
+.nav a {
+  text-decoration: none;
+  color: #1e90ff;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
