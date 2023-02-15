@@ -69,6 +69,7 @@ body {
   padding: 15px 0;
   font-size: 18px;
   color: #fff;
+  margin-bottom: 20px;
 }
 .form-control input:focus {
   outline: none;
@@ -84,7 +85,6 @@ body {
   font-size: 15px;
   border: none;
   background: lightblue;
-  margin-top: 20px;
 }
 .btn:focus {
   outline: none;
@@ -96,4 +96,24 @@ body {
 .text {
   text-align: center;
   margin-top: 20px;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: transform 0.5s;
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-20px);
 }
